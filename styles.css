@@ -1,0 +1,218 @@
+/* reset */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(---white);
+}
+h1, h2{
+  font-weight: 300;
+  font-family: "Playfair Display", serif;
+}
+html{
+  font-size: 20px;
+  line-height: 1.5;
+}
+/* style */
+:root{
+  ---gray: #e2e8f0;
+  ---white: #f8fafc;
+  ---black: #020617;
+  ---background-color: #0891b2;
+}
+main p, header p{
+  color: #6b7280;
+}
+body{
+  ---padding-side: 90px;
+  min-width: fit-content;
+}
+header{
+  isolation: isolate;
+  padding: 60px var(---padding-side);
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+header .info, .avatar img{
+  box-shadow: 1px 1px 5px rgba(5, 5, 5, 0.5);
+}
+header .background{
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.5));
+}
+header .background::after{
+  content: "";
+  display: block;
+  height: 100%;
+  background-color: var(---background-color);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+}
+header>h1{
+  text-align: center;
+  padding: 5em 2px 0em 2px;
+  font-size: 5vw;
+  align-self: end;
+  color: var(---white);
+  background-image: url(./pexels-m-s-a-469318555-30770767.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  flex-basis: fit-content;
+}
+header .info{
+  ---padding: 20px;
+  background-color: var(---white);
+  padding: 0 calc(var(---padding)*2) 0 calc(var(---padding)*1);
+  overflow: auto;
+  max-height: calc(9*2rem);
+  flex-basis: 40%;
+}
+.info h1{
+  padding: 1.5rem 0;
+}
+.info p{
+  font-size: 1rem;
+  padding-bottom: 1.5rem; 
+  font-weight: 300;
+}
+.info p>img{
+  display: none;
+  float: left;
+  width: auto;
+  height: 4lh;
+}
+.link
+{
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+.link img{
+  width: 2rem;
+}
+main{
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding: 20px var(---padding-side) 40px var(---padding-side);
+}
+main>h1{
+  padding-bottom: 20px;
+}
+main>ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  list-style: none;
+}
+ul>li{
+  box-shadow: 1px 1px 5px rgba(5, 5, 5, 0.4);
+}
+li{
+  flex: 0 1 min-content;
+  display: grid;
+  grid-template-areas: 
+  "pic pic"
+  "name icon"
+  "desc desc";
+  grid-template-columns: 5fr 2fr;
+  gap: 20px;
+  padding-bottom: 60px;
+}
+li>div:first-child{
+  grid-area: pic;
+  font-size: 2rem;
+  padding: 2em;
+  text-align: center;
+  min-width: fit-content;
+  color: var(---white);
+  font-family: "Playfair Display", serif;
+  font-weight: 200;
+}
+li:nth-child(1)>div:first-child{
+  background-color: #9e1c1c;
+}
+li:nth-child(2)>div:first-child{
+  background-color: #7d75ca;
+}
+li:nth-child(3)>div:first-child{
+  background-color: #5e8f4d;
+}
+li:nth-child(4)>div:first-child{
+  background-color: #c263b4;
+}
+li:nth-child(5)>div:first-child{
+  background-color: #d78f3a;
+}
+li:nth-child(6)>div:first-child{
+  background-color: #4ba1d2;
+}
+li>h2, li>p{
+  padding: 0 20px;
+}
+li>h2{
+  font-size: 1.2rem;
+}
+li>p{
+  grid-area: desc;
+}
+li .link-project{
+  padding-right: 20px;
+  grid-area: icon;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+li img{
+  width: 1.5rem;
+}
+footer{
+  overflow: visible;
+  color: var(---white);
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse ;
+  justify-content: center;
+  align-content: stretch;
+  padding: 80px var(---padding-side);
+  background-color: var(---background-color);
+  gap: 20px;
+}
+footer *{
+  background-color: transparent;
+}
+footer>img{
+  min-width: 0;
+  width: calc(60% + var(---padding-side));
+  object-fit: cover;
+}
+footer>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 5%;
+  gap: 20px;
+  flex: 1 1 min-content;
+}
+footer .link{
+  display: flex;
+  justify-content: start;
+}
+footer p{
+  display: flex;
+  align-items: end;
+  font-weight: 350;
+}
+footer p>svg{
+  flex: 0 0 1.5rem;
+  fill: var(---white);
+  padding-right: 1rem;
+}
