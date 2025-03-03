@@ -24,7 +24,7 @@ main p, header p{
   color: #6b7280;
 }
 body{
-  ---padding-side: 90px;
+  ---padding-side: 10vw;
   min-width: fit-content;
 }
 header{
@@ -109,7 +109,7 @@ main>h1{
 main>ul{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 50px;
   list-style: none;
 }
@@ -117,7 +117,7 @@ ul>li{
   box-shadow: 1px 1px 5px rgba(5, 5, 5, 0.4);
 }
 li{
-  flex: 0 1 min-content;
+  flex: 1 1 min-content;
   display: grid;
   grid-template-areas: 
   "pic pic"
@@ -130,7 +130,7 @@ li{
 li>div:first-child{
   grid-area: pic;
   font-size: 2rem;
-  padding: 2em;
+  padding: 5vw;
   text-align: center;
   min-width: fit-content;
   color: var(---white);
@@ -190,8 +190,10 @@ footer *{
   background-color: transparent;
 }
 footer>img{
+  display: block;
+  max-width: 80vw;
+  flex: 1 1 0;
   min-width: 0;
-  width: calc(60% + var(---padding-side));
   object-fit: cover;
 }
 footer>div{
@@ -200,19 +202,27 @@ footer>div{
   justify-content: space-between;
   padding-bottom: 5%;
   gap: 20px;
-  flex: 1 1 min-content;
+  flex: 1 1 fit-content;
+  max-width: max-content;
 }
 footer .link{
   display: flex;
   justify-content: start;
+}
+footer h1+p{
+  width: 16rem;
 }
 footer p{
   display: flex;
   align-items: end;
   font-weight: 350;
 }
-footer p>svg{
-  flex: 0 0 1.5rem;
+footer svg+p{
+  display: inline-block;
+}
+footer div>svg{
+  flex: 0 0 0;
   fill: var(---white);
   padding-right: 1rem;
+  width: 1.5rem;
 }
