@@ -238,6 +238,9 @@ footer div>svg{
     background: none;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   }
+  header .background::after{
+    height: 75%;
+  }
   header .info {
     overflow: visible;
     max-height: none;
@@ -257,8 +260,21 @@ footer div>svg{
   }
 }
 @media (width <= 500px){
+  header{
+    padding: 0;
+  }
+  header h1{
+    margin: 60px var(---padding-side);
+  }
+  header .info{
+    box-shadow: none;
+    max-height: none;
+  }
+  header .background::after{
+    height: 50%;
+  }
   footer{
-    padding: 0 0 0 0;
+    padding: 0;
   }
   footer>div{
     padding: 80px var(---padding-side)
