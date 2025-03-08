@@ -192,7 +192,7 @@ footer *{
 }
 footer>img{
   display: block;
-  max-width: 80vw;
+  max-width: 100%;
   flex: 1 1 0;
   min-width: 0;
   object-fit: cover;
@@ -227,7 +227,7 @@ footer div>svg{
   padding-right: 1rem;
   width: 1.5rem;
 }
-@media (750px <= width <= 2048px) {
+@media (500px <= width <= 1000px) {
   header{
     flex-direction: column;
   }
@@ -254,5 +254,13 @@ footer div>svg{
     transform: scale(1.2, 1.5) translate(-10%, -15%);
     object-fit: cover;
     box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+@media (width <= 500px){
+  footer{
+    padding: 0 0 0 0;
+  }
+  footer>div{
+    padding: 80px var(---padding-side)
   }
 }
