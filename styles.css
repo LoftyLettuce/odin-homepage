@@ -34,6 +34,8 @@ header{
   align-items: center;
   position: relative;
   box-sizing: border-box;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 header .info, .avatar img{
   box-shadow: 1px 1px 5px rgba(5, 5, 5, 0.5);
@@ -56,8 +58,8 @@ header .background::after{
 }
 header>h1{
   text-align: center;
-  padding: 5em 2px 0em 2px;
-  font-size: 5vw;
+  padding: 8em 2px 0em 2px;
+  font-size: 2.5rem;
   align-self: end;
   color: var(---white);
   background-image: url(./pexels-m-s-a-469318555-30770767.jpg);
@@ -72,7 +74,7 @@ header .info{
   padding: 0 calc(var(---padding)*2) 0 calc(var(---padding)*1);
   overflow: auto;
   max-height: calc(9*2rem);
-  flex-basis: 40%;
+  flex: 1 1 40%;
 }
 .info h1{
   padding: 1.5rem 0;
@@ -82,11 +84,10 @@ header .info{
   padding-bottom: 1.5rem; 
   font-weight: 300;
 }
-.info p>img{
+.info>img:first-child{
   display: none;
   float: left;
   width: auto;
-  height: 4lh;
 }
 .link
 {
@@ -225,4 +226,33 @@ footer div>svg{
   fill: var(---white);
   padding-right: 1rem;
   width: 1.5rem;
+}
+@media (750px <= width <= 2048px) {
+  header{
+    flex-direction: column;
+  }
+  header>h1{
+    z-index: 2;
+    padding: 1em 0 0 0;
+    transform: translate(1.5em, 0);
+    background: none;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  }
+  header .info {
+    overflow: visible;
+    max-height: none;
+  }
+  .info h1{
+    text-align: center;
+  }
+  .info img{
+    display: none;
+  }
+  .info>img:first-child{
+    display: inline-block;
+    width: 50%;
+    transform: scale(1.2, 1.5) translate(-10%, -15%);
+    object-fit: cover;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+  }
 }
