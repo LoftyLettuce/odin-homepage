@@ -18,7 +18,15 @@ html{
   ---gray: #e2e8f0;
   ---white: #f8fafc;
   ---black: #020617;
-  ---background-color: #0891b2;
+  ---background-color: #077A97;
+}
+@keyframes dropDown {
+  from {
+    background-color: var(---white);
+  }
+  to {
+    background-color: var(---background-color);
+  }
 }
 main p, header p{
   color: #6b7280;
@@ -37,7 +45,7 @@ header{
   justify-content: center;
   flex-wrap: wrap;
 }
-header .info, .avatar img{
+header .info, .avatar img, header>h1{
   box-shadow: 1px 1px 5px rgba(5, 5, 5, 0.5);
 }
 header .background{
@@ -53,7 +61,7 @@ header .background::after{
   content: "";
   display: block;
   height: 100%;
-  background-color: var(---background-color);
+  animation: 2s dropDown forwards;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
 }
 header>h1{
@@ -139,22 +147,28 @@ li>div:first-child{
   font-weight: 200;
 }
 li:nth-child(1)>div:first-child{
-  background-color: #9e1c1c;
+  ---background-color: #9e1c1c;
+  animation: 2s dropDown forwards;
 }
 li:nth-child(2)>div:first-child{
-  background-color: #7d75ca;
+  ---background-color: #7d75ca;
+  animation: 2s dropDown forwards;
 }
 li:nth-child(3)>div:first-child{
-  background-color: #5e8f4d;
+  ---background-color: #5e8f4d;
+  animation: 2s dropDown forwards;
 }
 li:nth-child(4)>div:first-child{
-  background-color: #c263b4;
+  ---background-color: #c263b4;
+  animation: 2s dropDown forwards;
 }
 li:nth-child(5)>div:first-child{
-  background-color: #d78f3a;
+  ---background-color: #d78f3a;
+  animation: 2s dropDown forwards;
 }
 li:nth-child(6)>div:first-child{
-  background-color: #4ba1d2;
+  ---background-color: #4ba1d2;
+  animation: 2s dropDown forwards;
 }
 li>h2, li>p{
   padding: 0 20px;
@@ -184,7 +198,7 @@ footer{
   justify-content: center;
   align-content: stretch;
   padding: 80px var(---padding-side);
-  background-color: var(---background-color);
+  animation: 2s dropDown forwards;
   gap: 20px;
 }
 footer *{
